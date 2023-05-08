@@ -1,5 +1,8 @@
 pipeline {
     agent any 
+    environment {
+        PYTHON_HOME = 'C:\\Users\\cmarcosd\\AppData\\Local\\Programs\\Python\\Python310'
+    }
     stages {
         stage('Stage Prueba') {
             steps {
@@ -8,7 +11,10 @@ pipeline {
         }
         stage('Stage PIP') {
             steps {
-                bat 'python --version'
+                bat """
+                set PATH=%PYTHON_HOME%;%PATH%
+                python --version
+                """
             }
         }
         stage('Checkout') {
