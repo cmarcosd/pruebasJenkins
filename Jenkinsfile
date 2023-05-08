@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Stage PIP') {
             steps {
-                bat 'pip list' 
+                sh 'pip list' 
             }
         }
         stage('Checkout') {
