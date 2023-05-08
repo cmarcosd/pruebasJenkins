@@ -44,7 +44,10 @@ pipeline {
         stage('Run tests') {
             steps {
                 // Paso para ejecutar las pruebas de pytest
-                bat 'pytest .\test_calculator.py'
+                bat """
+                set PATH=%PYTHON_HOME%;%PATH%
+                python -m pytest
+                """
             }
         }
     }
