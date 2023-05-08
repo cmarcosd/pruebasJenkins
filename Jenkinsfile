@@ -6,12 +6,33 @@ pipeline {
                 echo 'Hello world!' 
             }
         }
+        stage('Stage Prueba') {
+            steps {
+                sh 'pwd' 
+            }
+        }
+        stage('Stage Prueba') {
+            steps {
+                sh 'env' 
+            }
+        }
         stage('Checkout') {
             steps {
                 // Paso para obtener el código fuente desde el repositorio Git
                 cleanWs()
                 checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs:
                 [[url: 'https://github.com/cmarcosd/pruebasJenkins.git']]]
+            }
+        }
+        }
+        stage('Stage Prueba') {
+            steps {
+                sh 'pwd' 
+            }
+        }
+        stage('Stage Prueba') {
+            steps {
+                sh 'env' 
             }
         }
         stage('Install dependencies') {
