@@ -17,7 +17,7 @@ pipeline {
         stage('Run tests') {
             steps {
                 // Paso para ejecutar las pruebas de pytest
-                sh 'pytest'
+                sh 'pytest .\test_calculator.py'
             }
         }
     }
