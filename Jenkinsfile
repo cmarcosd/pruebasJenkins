@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Stage Prueba') {
             steps {
-                sh 'echo Hello world!' 
+                bat 'echo "Hello world!"' 
             }
         }
         stage('Stage PIP') {
             steps {
-                sh 'pip list' 
+                bat 'pip list' 
             }
         }
         stage('Checkout') {
@@ -22,7 +22,7 @@ pipeline {
         stage('Run tests') {
             steps {
                 // Paso para ejecutar las pruebas de pytest
-                sh 'pytest .\test_calculator.py'
+                bat 'pytest .\test_calculator.py'
             }
         }
     }
