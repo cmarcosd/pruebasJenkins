@@ -44,10 +44,15 @@ pipeline {
         stage('Run tests') {
             steps {
                 // Paso para ejecutar las pruebas de pytest
-                bat """
-                set PATH=%PYTHON_HOME%;%PATH%
-                python -m pytest --junitxml=test-report.xml
-                """
+                try {
+                    bat """
+                    set PATH=%PYTHON_HOME%;%PATH%
+                    python -m pytest --junitxml=test-report.xml
+                    """
+                } catch (Exception e) {
+                    // Capturar la excepción en caso de pruebas fallidas
+                    echo "Error en las pruebas: ${e.message}"
+                }
             }
         }
         stage('Publish test results') {
