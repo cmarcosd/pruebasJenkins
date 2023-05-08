@@ -6,12 +6,12 @@ pipeline {
                 echo 'Hello world!' 
             }
         }
-        stage('Stage Prueba') {
+        stage('Stage Prueba2') {
             steps {
                 sh 'pwd' 
             }
         }
-        stage('Stage Prueba') {
+        stage('Stage Prueba3') {
             steps {
                 sh 'env' 
             }
@@ -25,12 +25,12 @@ pipeline {
             }
         }
         }
-        stage('Stage Prueba') {
+        stage('Stage Prueba5') {
             steps {
                 sh 'pwd' 
             }
         }
-        stage('Stage Prueba') {
+        stage('Stage Prueba6') {
             steps {
                 sh 'env' 
             }
