@@ -9,11 +9,19 @@ pipeline {
                 bat 'echo "Hello world!"' 
             }
         }
-        stage('Stage PIP') {
+        stage('Stage Python Version') {
             steps {
                 bat """
                 set PATH=%PYTHON_HOME%;%PATH%
-                pip --version
+                python --version
+                """
+            }
+        }
+        stage('Stage PIP Version') {
+            steps {
+                bat """
+                set PATH=%PYTHON_HOME%;%PATH%
+                python -m pip --version
                 """
             }
         }
