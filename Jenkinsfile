@@ -25,6 +25,14 @@ pipeline {
                 """
             }
         }
+        stage('Stage Pytest Version') {
+            steps {
+                bat """
+                set PATH=%PYTHON_HOME%;%PATH%
+                python -m pytest --version
+                """
+            }
+        }
         stage('Checkout') {
             steps {
                 // Paso para obtener el código fuente desde el repositorio Git
