@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Paso para obtener el código fuente desde el repositorio Git
-                git credentialsId: '9279d6b3-5bb8-49c0-9eb2-8397cfb5dea9', url: 'https://github.com/cmarcosd/pruebasJenkins.git'
+                git credentialsId: '04814891-877d-4ae0-8692-fb706f2b73ae', url: 'https://github.com/cmarcosd/pruebasJenkins.git'
             }
         }
         stage('Run tests') {
