@@ -13,7 +13,7 @@ pipeline {
             steps {
                 bat """
                 set PATH=%PYTHON_HOME%;%PATH%
-                python --version
+                pip --version
                 """
             }
         }
