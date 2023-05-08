@@ -8,12 +8,7 @@ pipeline {
         }
         stage('Stage PIP') {
             steps {
-                try {
-                    bat 'python --version' 
-                }
-                catch(Exception e) {
-                    bat 'C:/Users/cmarcosd/AppData/Local/Programs/Python/Python310/python --version' 
-                }
+                bat 'python --version'
             }
         }
         stage('Checkout') {
