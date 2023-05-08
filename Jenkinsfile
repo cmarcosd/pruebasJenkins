@@ -9,7 +9,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Paso para obtener el código fuente desde el repositorio Git
-                git credentialsId: '04814891-877d-4ae0-8692-fb706f2b73ae', url: 'https://github.com/cmarcosd/pruebasJenkins.git'
+                cleanWs()
+                checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs:
+                [[url: 'https://github.com/cmarcosd/pruebasJenkins.git']]]
             }
         }
         stage('Run tests') {
