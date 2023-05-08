@@ -1,8 +1,8 @@
 pipeline {
     agent any 
-    environment {
+    /*environment {
         PYTHON_HOME = 'C:\\Users\\cmarcosd\\AppData\\Local\\Programs\\Python\\Python310'
-    }
+    }*/
     stages {
         stage('Stage Prueba') {
             steps {
