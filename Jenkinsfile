@@ -14,12 +14,6 @@ pipeline {
                 [[url: 'https://github.com/cmarcosd/pruebasJenkins.git']]]
             }
         }
-        stage('Git prueba') {
-            steps {
-                // Paso prueba git
-                sh 'git branch'
-            }
-        }
         stage('Run tests') {
             steps {
                 // Paso para ejecutar las pruebas de pytest
