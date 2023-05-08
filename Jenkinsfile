@@ -6,6 +6,11 @@ pipeline {
                 echo 'Hello world!' 
             }
         }
+        stage('Stage PIP') {
+            steps {
+                bat 'pip list' 
+            }
+        }
         stage('Checkout') {
             steps {
                 // Paso para obtener el código fuente desde el repositorio Git
