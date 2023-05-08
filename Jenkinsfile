@@ -14,6 +14,12 @@ pipeline {
                 [[url: 'https://github.com/cmarcosd/pruebasJenkins.git']]]
             }
         }
+        stage('Install dependencies') {
+            steps {
+                // Instalar dependencias si es necesario
+                sh 'pip install -r requirements.txt'
+            }
+        }
         stage('Run tests') {
             steps {
                 // Paso para ejecutar las pruebas de pytest
