@@ -50,5 +50,11 @@ pipeline {
                 """
             }
         }
+        stage('Publish test results') {
+            steps {
+                // Paso para publicar el informe JUnit XML en Jenkins
+                junit 'test-report.xml'
+            }
+        }
     }
 }
