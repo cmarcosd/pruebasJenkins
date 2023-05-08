@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Stage PIP') {
             steps {
-                bat 'pwd' 
+                sh 'pip list' 
             }
         }
         stage('Checkout') {
