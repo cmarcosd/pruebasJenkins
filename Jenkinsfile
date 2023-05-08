@@ -46,7 +46,7 @@ pipeline {
                 // Paso para ejecutar las pruebas de pytest
                 bat """
                 set PATH=%PYTHON_HOME%;%PATH%
-                python -m pytest
+                python -m pytest --junitxml=test-report.xml
                 """
             }
         }
