@@ -11,7 +11,7 @@ pipeline {
                 try {
                     bat 'python --version' 
                 }
-                catch() {
+                catch(Exception e) {
                     bat 'C:/Users/cmarcosd/AppData/Local/Programs/Python/Python310/python --version' 
                 }
             }
