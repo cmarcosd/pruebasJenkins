@@ -24,7 +24,6 @@ pipeline {
                 [[url: 'https://github.com/cmarcosd/pruebasJenkins.git']]]
             }
         }
-        }
         stage('Stage Prueba 5') {
             steps {
                 sh 'pwd' 
